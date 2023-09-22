@@ -1,44 +1,27 @@
-import 'dart:ffi';
-import 'dart:io';
-
 class Mahasiswa{
   String nama;
-  String nim;
+  int nim;
   String alamat;
   String gender;
+  
 
-  Mahasiswa(String nama, String alamat, String nim, String gender){
-    print('nama : ${nama}');
-    print('nim : ${nim}');
-    print('alamat : ${alamat}');
-    print('gender : ${gender}');
-  }
+  Mahasiswa(this.nama,this.alamat,this.nim, this.gender);
 
 }
 
 void main(){
 
-  print('masukan nama : ');
-  String nama = stdin.readLineSync() ?? '';
+  Mahasiswa mahasiswa1 =  Mahasiswa('william', 'jakarta', 32210112, 'laki');
+  Mahasiswa mahasiswa2 =  Mahasiswa('ivan', 'jakarta', 32210112, 'laki');
+  Mahasiswa mahasiswa3 =  Mahasiswa('saputra', 'jakarta', 32210112, 'laki');
+  Mahasiswa mahasiswa4 =  Mahasiswa('albert', 'jakarta', 32210112, 'laki');
+  Mahasiswa mahasiswa5 =  Mahasiswa('hansel', 'jakarta', 32210112, 'laki');
 
-  print('masukan nim : ');
-  String nim = stdin.readLineSync() ?? '';
-
-  print('masukan alamat : ');
-  String alamat = stdin.readLineSync() ?? '';
-
-  print('masukan gender : ');
-  String gender = stdin.readLineSync() ?? '';
-
-  Mahasiswa mahasiswa1 = new Mahasiswa(nama, alamat, nim, gender);
-  Mahasiswa mahasiswa2 = new Mahasiswa(nama, alamat, nim, gender);
-  Mahasiswa mahasiswa3 = new Mahasiswa(nama, alamat, nim, gender);
-  Mahasiswa mahasiswa4 = new Mahasiswa(nama, alamat, nim, gender);
-  Mahasiswa mahasiswa5 = new Mahasiswa(nama, alamat, nim, gender);
-
-
-
-
+  print('nama : ${mahasiswa1.nama}\n nim : ${mahasiswa1.nim}\n gender : ${mahasiswa1.gender}\n alamat : ${mahasiswa1.alamat}');
+  print('nama : ${mahasiswa2.nama}\n nim : ${mahasiswa2.nim}\n gender : ${mahasiswa2.gender}\n alamat : ${mahasiswa2.alamat}');
+  print('nama : ${mahasiswa3.nama}\n nim : ${mahasiswa3.nim}\n gender : ${mahasiswa3.gender}\n alamat : ${mahasiswa3.alamat}');
+  print('nama : ${mahasiswa4.nama}\n nim : ${mahasiswa4.nim}\n gender : ${mahasiswa4.gender}\n alamat : ${mahasiswa4.alamat}');
+  print('nama : ${mahasiswa5.nama}\n nim : ${mahasiswa5.nim}\n gender : ${mahasiswa5.gender}\n alamat : ${mahasiswa5.alamat}');
 
 
 }
